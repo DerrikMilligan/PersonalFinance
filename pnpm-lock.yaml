@@ -7,6 +7,7 @@ specifiers:
   '@sveltejs/adapter-auto': ^2.0.0
   '@sveltejs/adapter-static': 1.0.0-next.50
   '@sveltejs/kit': ^1.5.0
+  '@tauri-apps/api': ^1.2.0
   '@tauri-apps/cli': 2.0.0-alpha.2
   '@types/cookie': ^0.5.1
   '@typescript-eslint/eslint-plugin': ^5.45.0
@@ -28,6 +29,7 @@ specifiers:
   vitest: ^0.25.3
 
 dependencies:
+  '@tauri-apps/api': 1.2.0
   internal-ip: 7.0.0
 
 devDependencies:
@@ -431,6 +433,11 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /@tauri-apps/api/1.2.0:
+    resolution: {integrity: sha512-lsI54KI6HGf7VImuf/T9pnoejfgkNoXveP14pVV7XarrQ46rOejIVJLFqHI9sRReJMGdh2YuCoI3cc/yCWCsrw==}
+    engines: {node: '>= 14.6.0', npm: '>= 6.6.0', yarn: '>= 1.19.1'}
+    dev: false
 
   /@tauri-apps/cli-darwin-arm64/2.0.0-alpha.2:
     resolution: {integrity: sha512-Wu5QdZUgh0DEE0b3EKdJRkZzFoVngezxgvncQlMdXNaiKjdT767K2fB0XvQps+ycbtVLbUlG15jAwPZbWqRYGw==}

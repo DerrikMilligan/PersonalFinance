@@ -1,4 +1,14 @@
 <!-- YOU CAN DELETE EVERYTHING IN THIS PAGE -->
+<script>
+import { invoke } from '@tauri-apps/api/tauri';
+
+let name = '';
+
+const testInvoke = async () => {
+  let response = await invoke('hello_command', { name: 'Buddy!' });
+  name = response;
+}
+</script>
 
 <div class="container h-full mx-auto flex justify-center items-center">
 	<div class="space-y-10 text-center">
@@ -18,20 +28,9 @@
 			</svg>
 		</figure>
 		<!-- / -->
-		<div class="flex justify-center space-x-2">
-			<a
-				class="btn btn-filled"
-				href="https://skeleton.dev/"
-				target="_blank"
-				rel="noreferrer"
-			>
-				Launch Documentation
-			</a>
-		</div>
 		<div class="space-y-2">
-			<p>Try editing the following:</p>
-			<p><code>/src/routes/+layout.svelte</code></p>
-			<p><code>/src/routes/+page.svelte</code></p>
+      <button class="btn variant-filled" on:click={() => testInvoke()}>Test Invoke</button>
+      <h2>{name}</h2>
 		</div>
 	</div>
 </div>

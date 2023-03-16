@@ -8,7 +8,8 @@
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
     "test:unit": "vitest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "tauri": "tauri"
   },
   "devDependencies": {
     "@fontsource/fira-mono": "^4.5.10",
@@ -38,6 +39,7 @@
   },
   "type": "module",
   "dependencies": {
+    "@tauri-apps/api": "^1.2.0",
     "internal-ip": "^7.0.0"
   }
 }
