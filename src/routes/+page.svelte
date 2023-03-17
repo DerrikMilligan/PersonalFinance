@@ -6,7 +6,9 @@ let name = '';
 
 const testInvoke = async () => {
   let response = await invoke('hello_command', { name: 'Buddy!' });
-  name = response;
+  let parsed = JSON.parse(response);
+  let person = parsed?.results[0];
+  name = `${person.name.first} ${person.name.last}`;
 }
 </script>
 
@@ -29,7 +31,7 @@ const testInvoke = async () => {
 		</figure>
 		<!-- / -->
 		<div class="space-y-2">
-      <button class="btn variant-filled" on:click={() => testInvoke()}>Test Invoke</button>
+      <button class="btn variant-filled" on:click={() => testInvoke()}>Generate Name</button>
       <h2>{name}</h2>
 		</div>
 	</div>
