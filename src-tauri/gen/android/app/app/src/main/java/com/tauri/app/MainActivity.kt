@@ -1,3 +1,7 @@
 package com.tauri.app
 
-class MainActivity : TauriActivity()
+import app.tauri.plugin.PluginManager
+
+class MainActivity : TauriActivity() {
+  var pluginManager: PluginManager = PluginManager(this)
+}

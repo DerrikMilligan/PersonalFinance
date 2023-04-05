@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">tauri-finance</string>
+    <string name="main_activity_title">tauri-finance</string>
 </resources>
